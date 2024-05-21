@@ -7,18 +7,18 @@ namespace ДЗ.Поликлиника
         static void Main(string[] args)
         {
             int queueNumber;
-            int waitingTimeInQueue;
-            int receptionTimeForOnePersonInMinutes = 10;
-            int minutesInAHour = 60;
-            int waitingHour;
-            int waitingMinute;
+            int waitingQueue;
+            int receptionMinutesForPerson = 10;
+            int minutesHour = 60;
+            int hour;
+            int minute;
             Console.WriteLine("Добро пожаловать в нашу поликлинику. Возьмите пожалуйста талон на приём к врачю.");
             Console.Write("Укажите ваш номер в очереди по талону:");
             queueNumber = Convert.ToInt32(Console.ReadLine());
-            waitingTimeInQueue=(queueNumber - 1)* receptionTimeForOnePersonInMinutes;
-            waitingHour=waitingTimeInQueue/ minutesInAHour;
-            waitingMinute = waitingTimeInQueue % minutesInAHour;
-            Console.WriteLine($"Ваше время ожидание в очереди: {waitingHour} ч., {waitingMinute} мин.");
+            waitingQueue = (queueNumber - 1)* receptionMinutesForPerson;
+            hour= waitingQueue / minutesHour;
+            minute = waitingQueue % minutesHour;
+            Console.WriteLine($"Ваше время ожидание в очереди: {hour} ч., {minute} мин.");
         }
     }
 }
