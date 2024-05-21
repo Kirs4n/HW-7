@@ -10,15 +10,15 @@ namespace ДЗ.Поликлиника
             int waitingQueue;
             int receptionMinutesForPerson = 10;
             int minutesHour = 60;
-            int hour;
-            int minute;
+            int waiteHours;
+            int waiteMinutes;
             Console.WriteLine("Добро пожаловать в нашу поликлинику. Возьмите пожалуйста талон на приём к врачю.");
             Console.Write("Укажите ваш номер в очереди по талону:");
             queueNumber = Convert.ToInt32(Console.ReadLine());
             waitingQueue = (queueNumber - 1)* receptionMinutesForPerson;
-            hour= waitingQueue / minutesHour;
-            minute = waitingQueue % minutesHour;
-            Console.WriteLine($"Ваше время ожидание в очереди: {hour} ч., {minute} мин.");
+            waiteHours = waitingQueue / minutesHour;
+            waiteMinutes = waitingQueue % minutesHour;
+            Console.WriteLine($"Ваше время ожидание в очереди: {waiteHours} ч., {waiteMinutes} мин.");
         }
     }
 }
